@@ -3,5 +3,5 @@ An old university project on pattern matching, machine learning, speech recognit
 
 Words are recorded using the Java Sound API, preprocessed in various steps and finally the viterbi algorithm is used to learn models on words and to match models against recordings for speech recognition
 
-![Main GUI](marchbnr.github.com/speech-recog/Files/screenshot1.png)
-![Learned models](marchbnr.github.com/speech-recog/Files/screenshot2.png)
+![Main GUI](Files/screenshot1.png)
+![Learned models](Files/screenshot2.png)
