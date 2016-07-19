@@ -20,7 +20,7 @@ public class TimeSlopeTest extends TestCase implements WDetectionIfc {
 		int frameSize = 12;
 		int frames = 37;
 		{
-			DoubleSource source = new DoublesParser("Files/kanalnormierung.txt");
+			DoubleSource source = new DoublesParser("kanalnormierung.txt");
 			double[][] samples = new double[frames][frameSize];
 			for (int u = 0; u < frames; u++) {
 				for (int i = 0; i < frameSize; i++) {
@@ -38,7 +38,7 @@ public class TimeSlopeTest extends TestCase implements WDetectionIfc {
 		}
 
 		{
-			DoubleSource resultsSource = new DoublesParser("Files/ableitung.txt");
+			DoubleSource resultsSource = new DoublesParser("ableitung.txt");
 			for (double[] resultVector : results) {
 				for (double sample : resultVector) {
 					Double expected = resultsSource.getNextDouble();

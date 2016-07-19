@@ -13,7 +13,7 @@ public class MelScaleTest extends TestCase implements DPreprocIfc {
 	public void testFromPower() throws Exception {
 		int melSize = 15;
 		{
-			DoubleSource source = new DoublesParser("Files/powerspectrum.txt");
+			DoubleSource source = new DoublesParser("powerspectrum.txt");
 			int frameSize = 128;
 			double[] frame = new double[frameSize];
 			for(int i=0; i<frameSize; i++) {
@@ -25,7 +25,7 @@ public class MelScaleTest extends TestCase implements DPreprocIfc {
 		}
 		
 		{
-			DoubleSource resultsSource = new DoublesParser("Files/filterbank.txt");
+			DoubleSource resultsSource = new DoublesParser("filterbank.txt");
 			for(int i=0; i<melSize; i++) {
 				Double expected = resultsSource.getNextDouble();
 //				System.out.println("comparing: " + expected + " and " + results[i]);

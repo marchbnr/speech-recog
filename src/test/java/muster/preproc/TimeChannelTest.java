@@ -18,7 +18,7 @@ public class TimeChannelTest extends TestCase implements DPreprocIfc {
 		int frameSize = 12;
 		int frames = 33;
 		{
-			DoubleSource source = new DoublesParser("Files/dct.txt");
+			DoubleSource source = new DoublesParser("dct.txt");
 			double[][] samples = new double[frames][frameSize];
 			for(int u=0; u<frames; u++) {
 				for(int i=0; i<frameSize; i++) {
@@ -33,7 +33,7 @@ public class TimeChannelTest extends TestCase implements DPreprocIfc {
 		}
 		
 		{
-			DoubleSource resultsSource = new DoublesParser("Files/kanalnormierung.txt");
+			DoubleSource resultsSource = new DoublesParser("kanalnormierung.txt");
 			for(double[] resultVector : results) {
 				for(Double sample : resultVector) {
 					Double expected = resultsSource.getNextDouble();

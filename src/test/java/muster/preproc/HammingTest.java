@@ -14,7 +14,7 @@ public class HammingTest extends TestCase implements DPreprocIfc{
 	int frameSize = 256;
 
 	public void testHammingValues() throws Exception {
-		DoubleSource source = new DoublesParser("Files/samples.txt");
+		DoubleSource source = new DoublesParser("samples.txt");
 		FrameSplitter splitter = new FrameSplitter(source, new HammingWindow(this), frameSize);
 		splitter.start();
 		while(running) {
@@ -24,7 +24,7 @@ public class HammingTest extends TestCase implements DPreprocIfc{
 		for(double value : frame) {
 			System.out.print(value + " ");
 		}
-		DoubleSource resultsParser = new DoublesParser("Files/hamming.txt");
+		DoubleSource resultsParser = new DoublesParser("hamming.txt");
 		Double[] results = new Double[frameSize];
 		for(int i=0; i<frameSize; i++) {
 			results[i] = resultsParser.getNextDouble();

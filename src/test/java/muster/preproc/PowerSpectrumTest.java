@@ -14,7 +14,7 @@ public class PowerSpectrumTest extends TestCase implements DPreprocIfc {
 	
 	public void testFromHamming() throws Exception {
 		{
-			DoubleSource source = new DoublesParser("Files/hamming.txt");
+			DoubleSource source = new DoublesParser("hamming.txt");
 			double[] frame = new double[frameSize];
 			for(int i=0; i<frameSize; i++) {
 				frame[i] = source.getNextDouble();
@@ -24,7 +24,7 @@ public class PowerSpectrumTest extends TestCase implements DPreprocIfc {
 		}
 		
 		{
-			DoubleSource resultsSource = new DoublesParser("Files/powerspectrum.txt");
+			DoubleSource resultsSource = new DoublesParser("powerspectrum.txt");
 			for(int i=0; i<frameSize/2; i++) {
 				Double expected = resultsSource.getNextDouble();
 //				System.out.println("comparing: " + expected + " and " + result[i]);

@@ -23,36 +23,36 @@ public class PreprocTest extends TestCase implements WDetectionIfc, DPreprocIfc 
 	}
 	
 	public void testHamming() throws Exception {
-		runTest(1, "Files/hamming.txt");
+		runTest(1, "hamming.txt");
 	}
 	
 	public void testPower() throws Exception {
-		runTest(2, "Files/powerspectrum.txt");
+		runTest(2, "powerspectrum.txt");
 	}
 	
 	public void testMel() throws Exception {
-		runTest(3, "Files/filterbank.txt");
+		runTest(3, "filterbank.txt");
 	}
 	
 	public void testLog() throws Exception {
-		runTest(4, "Files/log.txt");
+		runTest(4, "log.txt");
 	}
 	
 	public void testDCT() throws Exception {
-		runTest(5, "Files/dct.txt");
+		runTest(5, "dct.txt");
 	}
 	
 	public void testChannel() throws Exception {
-		runTest(6, "Files/kanalnormierung.txt");
+		runTest(6, "kanalnormierung.txt");
 	}
 	
 	public void testSlope() throws Exception {
-		runTest(7, "Files/ableitung.txt");
+		runTest(7, "ableitung.txt");
 	}
 
 	public void runTest(int step, String fileName) throws Exception {
 		{
-			FilePlayer player = new FilePlayer("Files/vielleicht.wav");
+			FilePlayer player = new FilePlayer("vielleicht.wav");
 			DoubleSource source = new ByteConverter(player);
 			LongPreprocessor preproc = new LongPreprocessor(this, step);
 			FrameSplitter splitter = new FrameSplitter(source, preproc, 256);

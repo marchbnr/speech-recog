@@ -17,7 +17,7 @@ public class SplitterTest extends TestCase implements DPreprocIfc {
 	public void testFromWave() throws Exception {
 		int frameSize = 256;
 		{
-			FilePlayer player = new FilePlayer("Files/vielleicht.wav");
+			FilePlayer player = new FilePlayer("vielleicht.wav");
 			FrameSplitter splitter = new FrameSplitter(new ByteConverter(player), this, frameSize);
 			player.start();
 			splitter.start();
@@ -27,7 +27,7 @@ public class SplitterTest extends TestCase implements DPreprocIfc {
 		}
 		
 		{
-			DoubleSource resultsSource = new DoublesParser("Files/samples.txt");
+			DoubleSource resultsSource = new DoublesParser("samples.txt");
 			for(int i=0; i<33; i++) {
 				for(int u=0; u<frameSize; u++) {
 					Double expected = resultsSource.getNextDouble();

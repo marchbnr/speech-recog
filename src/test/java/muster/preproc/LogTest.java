@@ -13,7 +13,7 @@ public class LogTest extends TestCase implements DPreprocIfc {
 	public void testFromMel() throws Exception {
 		int size = 15;
 		{
-			DoubleSource source = new DoublesParser("Files/filterbank.txt");
+			DoubleSource source = new DoublesParser("filterbank.txt");
 			double[] frame = new double[size];
 			for(int i=0; i<size; i++) {
 				frame[i] = source.getNextDouble();
@@ -24,7 +24,7 @@ public class LogTest extends TestCase implements DPreprocIfc {
 		}
 		
 		{
-			DoubleSource resultsSource = new DoublesParser("Files/log.txt");
+			DoubleSource resultsSource = new DoublesParser("log.txt");
 			for(int i=0; i<size; i++) {
 				Double expected = resultsSource.getNextDouble();
 //				System.out.println("comparing: " + expected + " and " + results[i]);
