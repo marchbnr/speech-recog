@@ -17,7 +17,7 @@ public class RecognitionTest extends TestCase {
 		
 		Reference sample = new Reference(vectorA);
 		Reference ref = new Reference(vectorB);
-		
+
 		double distance = RefComparison.getDistance(0, sample, 0, ref);
 //		System.out.println("Distance: " + distance);
 		assertEquals(10.0, distance, Double.parseDouble("1.09e-9"));
@@ -57,7 +57,7 @@ public class RecognitionTest extends TestCase {
 	}
 	
 	public void testCloseVielleichtComparison() {
-		TestData data = new TestData();
+		SampleData data = new SampleData();
 		Reference sample = new Reference(data.vielleichtB);
 		Reference ref = new Reference(data.vielleichtA);
 		RefComparison comparison = new RefComparison(sample, ref);
@@ -67,7 +67,7 @@ public class RecognitionTest extends TestCase {
 	}
 	
 	public void testFarAufnahmeComparison() {
-		TestData data = new TestData();
+		SampleData data = new SampleData();
 		Reference sample = new Reference(data.aufnahme);
 		Reference ref = new Reference(data.vielleichtA);
 		RefComparison comparison = new RefComparison(sample, ref);

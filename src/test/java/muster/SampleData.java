@@ -1,6 +1,6 @@
 package muster;
 
-public class TestData {
+public class SampleData {
 
 	public double[][] vielleichtA = 
 	{
